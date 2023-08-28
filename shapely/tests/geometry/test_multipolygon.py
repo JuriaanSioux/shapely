@@ -74,7 +74,7 @@ class TestMultiPolygon(MultiGeometryTestCase):
 
         # Or from a np.array of polygons
         geom_multiple_from_array = MultiPolygon(np.array([p, p]))
-        assert np.all(geom_multiple_from_array == geom_multiple_from_list)
+        assert geom_multiple_from_array == geom_multiple_from_list
 
         # Or from another multi-polygon
         geom2 = MultiPolygon(geom)
